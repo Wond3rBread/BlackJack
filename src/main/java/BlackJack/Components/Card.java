@@ -1,52 +1,53 @@
 package BlackJack.Components;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
-public class Card implements CardContainer{
-    private String farge;
-    private int tall;
-    private String rank;
-    // private ArrayList<Character> fargeRekke = new ArrayList<>(Arrays.asList('C', 'D', 'H', 'S'));
-
-    public Card(String farge, int tall, String rank) {
-        this.farge = farge;
-        this.tall = tall;
-        this.rank = rank;
-
-        if (!(this.farge == "Spades" || this.farge == "Hearts" || this.farge == "Diamonds" || this.farge == "Clubs")) {
-            throw new IllegalArgumentException("Ugyldig farge");
-        }
-        else if (this.tall < 1 || this.tall > 13 ) {
-            throw new IllegalArgumentException("Ugyldig tall");
-        }
-
-    }
-
-    public String getSuit() {
-        return this.farge;
-    }
-
-    public String getRank() {
-        return this.rank;
-    }
-
-    public int getPointValue() {
-        return this.tall;
-    }
-
-    // public void changeAce() {
-
-    // }
+public class Card implements Comparable<Card>{
+    private Suit suit;
+     private Rank rank;
 
     
-
-    @Override
-    public String toString() {
-        return this.farge + String.valueOf(this.tall) + this.rank;
+    public Card(Suit suit, Rank rank){
+        this.suit = suit;
+        this.rank = rank;
     }
 
-    public static void main(String[] args) {
-        
+    
+    public Card(Card card){
+        this.suit = card.getSuit();
+        this.rank = card.getRank();
+    }
+
+    
+    public int getValue(){
+        return rank.rankValue;
+    }
+
+    
+    public Suit getSuit(){
+        return suit;
+    }
+
+    public Rank getRank(){
+        return rank;
+    }
+
+    
+    public String toString(){
+        return ("["+rank+" of "+ suit + "] ("+this.getValue()+")");
+
+    }
+
+    
+    @Override
+    public int compareTo(Card c) {
+        //if this card is greater than the other card
+        if(this.getValue() > c.getValue()){
+            return 1;
+        }
+        else if(this.getValue() < c.getValue()){
+            return -1;
+        }
+        else{
+            return 0;
+        }
     }
 }
