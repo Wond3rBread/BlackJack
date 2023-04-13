@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="561.0" style="-fx-background-image: /Users/bengtandreasrotheim/Desktop/fyfane/BlackJack/images/BlackJackTable.jpeg;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BlackJack.BlackJackController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="561.0" pickOnBounds="true">
+         <image>
+            <!-- <Image url="@../../../../images/gronn.jpeg" /> -->
+            <Image url="file:/Users/bengtandreasrotheim/Desktop/fyfane/BlackJack/images/gronn.jpeg" />
+
+         </image></ImageView>
+      <Button fx:id="newGame" layoutX="237.0" layoutY="244.0" mnemonicParsing="false" onAction="#startGame" text="Start Game" />
+      <TextField fx:id="gName" layoutX="198.0" layoutY="156.0" promptText="Enter name" />
+   </children>
+</AnchorPane>

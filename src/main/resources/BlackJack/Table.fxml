@@ -6,7 +6,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="561.0" style="-fx-background-image: /Users/bengtandreasrotheim/Desktop/fyfane/BlackJack/images/BlackJackTable.jpeg;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BlackJack.BlackJackController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="561.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BlackJack.BlackJackController">
    <children>
       <ImageView fitHeight="400.0" fitWidth="640.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -15,12 +15,9 @@
       </ImageView>
       <Button fx:id="hitButton" layoutX="308.0" layoutY="355.0" mnemonicParsing="false" onAction="#cardHit" text="Hit" />
       <Button fx:id="standButton" layoutX="201.0" layoutY="355.0" mnemonicParsing="false" onAction="#cardStand" text="Stand" />
-      <ImageView fx:id="twoC" fitHeight="82.0" fitWidth="74.0" layoutX="253.0" layoutY="-105.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../images/2_of_clubs.png" />
-         </image>
-      </ImageView>
-      <TextField fx:id="playerValue" layoutX="259.0" layoutY="260.0" onAction="#setPlayerValue" prefHeight="25.0" prefWidth="43.0" />
-      <TextField fx:id="dealerValue" layoutX="259.0" layoutY="52.0" onAction="#setDealerValue" prefHeight="25.0" prefWidth="43.0" />
+      <TextField fx:id="playerValue" editable="false" layoutX="259.0" layoutY="260.0" prefHeight="25.0" prefWidth="43.0" />
+      <TextField fx:id="dealerValue" editable="false" layoutX="259.0" layoutY="52.0" prefHeight="25.0" prefWidth="43.0" />
+      <TextField editable="false" layoutX="253.0" layoutY="14.0" prefHeight="25.0" prefWidth="56.0" style="-fx-background-color: green;" text="Dealer" />
+      <TextField fx:id="playerName" alignment="CENTER" layoutX="198.0" layoutY="224.0" style="-fx-background-color: green;" />
    </children>
 </AnchorPane>

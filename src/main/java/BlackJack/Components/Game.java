@@ -5,7 +5,7 @@ public class Game {
 
     private Dealer dealer;
     private Player player;
-    private int wins, losses, pushes;
+    private int wins, losses, pushes, decision;
 
 
 
@@ -70,7 +70,8 @@ public class Game {
             startRound();
         }
 
-        player.makeDecision(deck, discarded);
+        
+        player.makeDecision(deck, discarded, decision);
 
         if(player.getHand().calculatedValue() > 21){
             System.out.println("You have gone over 21.");

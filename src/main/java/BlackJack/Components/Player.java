@@ -11,23 +11,23 @@ public class Player extends Person{
     }
 
     
-    public void makeDecision(Deck deck, Deck discard) {
+    public void makeDecision(Deck deck, Deck discard, int decision) {
 
-        int  decision = 0;
+        // int  decision = 0;
         boolean getNum = true;
 
-        while(getNum){
-            try{
-                System.out.println("Would you like to: 1) Hit or 2) Stand");
-                decision = input.nextInt();
-                getNum = false;
+        // while(getNum){
+        //     try{
+        //         System.out.println("Would you like to: 1) Hit or 2) Stand");
+        //         decision = input.nextInt();
+        //         getNum = false;
 
-            }
-            catch(Exception e){
-                System.out.println("Invalid");
-                input.next();
-            }
-        }
+        //     }
+        //     catch(Exception e){
+        //         System.out.println("Invalid");
+        //         input.next();
+        //     }
+        // }
 
         if (decision == 1) {
             this.hit(deck, discard);
@@ -35,7 +35,7 @@ public class Player extends Person{
                 return;
             }
             else{
-                this.makeDecision(deck, discard);
+                this.makeDecision(deck, discard, decision);
             }
 
         } else {
