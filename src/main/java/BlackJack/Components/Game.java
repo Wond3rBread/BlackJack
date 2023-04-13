@@ -111,4 +111,8 @@ public class Game {
         e.printStackTrace();
     }
 }
+ public static void main(String[] args) {
+    Deck deck = new Deck(true);
+    System.out.println(deck);
+ }
 }

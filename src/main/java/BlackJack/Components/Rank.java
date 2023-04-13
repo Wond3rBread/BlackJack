@@ -18,7 +18,6 @@ public enum Rank {
     String rankName;
     int rankValue;
 
-    //constructor for Enum, each Rank has a name and a value
     Rank(String rankName, int rankValue){
         this.rankName = rankName;
         this.rankValue = rankValue;
